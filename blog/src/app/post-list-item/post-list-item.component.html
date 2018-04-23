@@ -1,3 +1,20 @@
-<div class="list-group-item">
-{{post}}
+<div [ngClass]="{'row': true,
+                'list-group-item': true,
+                'list-group-item-success': rate > 0,
+                'list-group-item-danger': rate < 0 }">
+    <div class="col-sm-8">
+        <h2>{{Item.title}}</h2>
+    </div>
+    <div class="col-sm-4">
+        <p [ngStyle]="{color:getColor(), 
+            fontStyle:getFont(),
+            fontWeight:getWeight()}">
+                {{Item.created_at | date : "dd/MM/yyyy, hh:mm a" }}
+        </p>
+    </div>
+    <div class="col-xs-12">
+        <p>{{Item.content}}</p>
+        <button class="btn btn-success" (click)=onLovePost()>Love it!</button>
+        <button class="btn btn-danger" (click)=onDoNotLovePost()>Don't love it!</button>
+    </div>
 </div>
