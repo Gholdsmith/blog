@@ -12,22 +12,16 @@ export class PostListItemComponent implements OnInit {
     title: string,
     content : string,
     created_at: Date,
-    loveIts: number
+    rate: number
   };
 
   @Input() rate: number;
 
   constructor() {
-    console.log("postlistitem - constructor");
-
-
   }
 
   ngOnInit() {
-    console.log("postlistItem - Init");
-    console.log(this.Item.title);
     this.rate = 0;
-
   }
 
   getColor(){
