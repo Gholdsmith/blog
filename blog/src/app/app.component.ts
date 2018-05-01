@@ -8,9 +8,9 @@ import { Post } from './post/post.component';
 })
 export class AppComponent {
   postItems = [
-    new Post('Mon premier post', 'ceci est le premier post', 6),
-    new Post('Mon second post', 'Ce cie est le seconde post de ce blog ', -4),
-    new Post('Mon troisième post', 'et voici le troisième post avec du blablablabla ', 3)
+    new Post('Mon premier post', 'ceci est le premier post'),
+    new Post('Mon second post', 'Ce cie est le seconde post de ce blog '),
+    new Post('Mon troisième post', 'et voici le troisième post avec du blablablabla ')
   ];
 }
 

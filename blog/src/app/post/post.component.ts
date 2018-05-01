@@ -12,10 +12,10 @@ export class Post implements OnInit {
   rate: number;
   created_at: string;
 
-  constructor(title: string, content: string, rate: number) {
+  constructor(title: string, content: string) {
     this.title = title;
     this.content = content;
-    this.rate = rate;
+    this.rate = 0;
     this.created_at = Date();
   }
 

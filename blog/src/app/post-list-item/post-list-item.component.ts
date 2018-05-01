@@ -34,9 +34,11 @@ export class PostListItemComponent implements OnInit {
   }
   onLovePost() {
     this.Item.rate++;
+    console.log(this.Item.title + ' : ' + this.Item.rate);
   }
 
   onDoNotLovePost() {
     this.Item.rate--;
+    console.log(this.Item.title + ' : ' + this.Item.rate);
   }
 }
