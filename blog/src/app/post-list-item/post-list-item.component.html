@@ -1,7 +1,7 @@
 <div [ngClass]="{'row': true,
                 'list-group-item': true,
-                'list-group-item-success': rate > 0,
-                'list-group-item-danger': rate < 0 }">
+                'list-group-item-success': Item.rate > 0,
+                'list-group-item-danger': Item.rate < 0 }">
     <div class="col-sm-8">
         <h2>{{Item.title}}</h2>
     </div>
@@ -9,7 +9,7 @@
         <p [ngStyle]="{color:getColor(), 
             fontStyle:getFont(),
             fontWeight:getWeight()}">
-                {{Item.created_at | date : "dd/MM/yyyy, hh:mm a" }}
+            {{Item.created_at | date : "dd/MM/yyyy, hh:mm a" }}
         </p>
     </div>
     <div class="col-xs-12">

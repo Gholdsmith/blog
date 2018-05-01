@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class Post implements OnInit {
 
   title: string;
   content: string;
-  created_at: string;
   rate: number;
-  
-  constructor(title,content,rate) { 
+  created_at: string;
+
+  constructor(title: string, content: string, rate: number) {
     this.title = title;
     this.content = content;
     this.rate = rate;

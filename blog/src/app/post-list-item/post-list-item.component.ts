@@ -10,40 +10,33 @@ export class PostListItemComponent implements OnInit {
 
   @Input() Item: {
     title: string,
-    content : string,
-    created_at: Date,
-    rate: number
+    content: string,
+    rate: number,
+    created_at: Date
   };
-
-  @Input() rate: number;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.rate = 0;
   }
 
-  getColor(){
+  getColor() {
     return 'black';
   }
 
-  getFont(){
+  getFont() {
     return 'italic';
   }
 
-  getWeight(){
+  getWeight() {
     return 'bold';
   }
   onLovePost() {
-    this.rate++;
-    console.log(this.rate);
-    
+    this.Item.rate++;
   }
 
   onDoNotLovePost() {
-    this.rate--;
-    console.log(this.rate);
-    
+    this.Item.rate--;
   }
 }
